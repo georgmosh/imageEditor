@@ -1,0 +1,259 @@
+\hypertarget{classmath_1_1_image}{}\section{math\+:\+:Image Class Reference}
+\label{classmath_1_1_image}\index{math\+::\+Image@{math\+::\+Image}}
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+Inheritance diagram for math\+:\+:Image\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmath_1_1_image}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ $\ast$ \hyperlink{classmath_1_1_image_a11850e9ecae1cced03a8ca2ad9469616}{Image\+::get\+Raw\+Data\+Ptr} ()
+\item 
+\hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ \hyperlink{classmath_1_1_image_ac3df85cc8f60c6f0b2d3de123fa9cf96}{Image\+::get\+Pixel} (unsigned int x, unsigned int y) const
+\item 
+void \hyperlink{classmath_1_1_image_aa2b37a157ae5f1711b7eaf15b3f6c96a}{Image\+::set\+Pixel} (unsigned int x, unsigned int y, \hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ \&value)
+\item 
+void \hyperlink{classmath_1_1_image_a6078dd91d77a6753e774466e61afd6f6}{Image\+::set\+Data} (const \hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ $\ast$\&data\+\_\+ptr)
+\item 
+void \hyperlink{classmath_1_1_image_a3dc725fbfeac02c4687bb7c7e4a184fd}{Image\+::resize} (unsigned int new\+\_\+width, unsigned int new\+\_\+height)
+\item 
+bool \hyperlink{classmath_1_1_image_a152102a0b98f58cd4bb6206353fb0a4f}{operator$<$$<$} (std\+::string filename)
+\item 
+bool \hyperlink{classmath_1_1_image_a5a48aa778e407699272463a1be8ac16f}{operator$>$$>$} (std\+::string filename)
+\item 
+\hyperlink{classmath_1_1_image_a845cd219c6624862cc0c632a8a9efd5f}{Image\+::\+Image} ()
+\item 
+\hyperlink{classmath_1_1_image_aae37c3657dd8d50277cd9eb9fa15ec7b}{Image\+::\+Image} (unsigned int \hyperlink{classmath_1_1_array_aac107e42abccdfb484b0544e6a860c10}{width}, unsigned int \hyperlink{classmath_1_1_array_a80b79625a8f11cbc63843376b591360c}{height})
+\item 
+\hyperlink{classmath_1_1_image_a5cccddb81385864de4c9365d3ac95596}{Image\+::\+Image} (unsigned int \hyperlink{classmath_1_1_array_aac107e42abccdfb484b0544e6a860c10}{width}, unsigned int \hyperlink{classmath_1_1_array_a80b79625a8f11cbc63843376b591360c}{height}, const \hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ $\ast$data\+\_\+ptr)
+\item 
+\hyperlink{classmath_1_1_image_ad58510b279a054e467bf6b4a78c6f75e}{Image\+::\+Image} (const \hyperlink{classmath_1_1_image}{Image} \&src)
+\item 
+\hyperlink{classmath_1_1_image_a584aa9f6d6f9bd80e94c773402bcf5e2}{Image\+::$\sim$\+Image} ()
+\item 
+\hyperlink{classmath_1_1_image}{Image} \& \hyperlink{classmath_1_1_image_a0c6305898541b826fa8f5f65333d9072}{Image\+::operator=} (const \hyperlink{classmath_1_1_image}{Image} \&right)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+It is the class that represents a generic data container for an image.
+
+It holds the actual buffer of the pixel values and provides methods for accessing them, either as individual pixels or as a memory block. The \hyperlink{classmath_1_1_image}{Image} class alone does not provide any functionality for loading and storing an image, as it is the result or input to such a procedure.
+
+The internal buffer of an image object stores the actual bytes (data) of the color image as a contiguous sequence of R\+GB triplets. All values stored in the internal memory buffer are floating point values and for typical (normalized) intensity ranges, each color component is within the range \mbox{[}0.\+0, 1.\+0\mbox{]}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmath_1_1_image_a584aa9f6d6f9bd80e94c773402bcf5e2}\label{classmath_1_1_image_a584aa9f6d6f9bd80e94c773402bcf5e2}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::$\sim$\+Image@{Image\+::$\sim$\+Image}}
+\index{Image\+::$\sim$\+Image@{Image\+::$\sim$\+Image}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::$\sim$\+Image()}{Image::~Image()}}
+{\footnotesize\ttfamily math\+::\+Image\+::\+Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The \hyperlink{classmath_1_1_image}{Image} destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmath_1_1_image_ac3df85cc8f60c6f0b2d3de123fa9cf96}\label{classmath_1_1_image_ac3df85cc8f60c6f0b2d3de123fa9cf96}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::get\+Pixel@{Image\+::get\+Pixel}}
+\index{Image\+::get\+Pixel@{Image\+::get\+Pixel}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::get\+Pixel()}{Image::getPixel()}}
+{\footnotesize\ttfamily \hyperlink{classmath_1_1_vec3}{Vec3}$<$float$>$ math\+::\+Image\+::\+Image\+::get\+Pixel (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption}) const}
+
+Obtains the color of the image at location (x,y).
+
+The method should do any necessary bounds checking.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & is the (zero-\/based) horizontal index of the pixel to get. \\
+\hline
+{\em y} & is the (zero-\/based) vertical index of the pixel to get.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The color of the (x,y) pixel as a Color object. Returns a black (0,0,0) color in case of an out-\/of-\/bounds x,y pair. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1_image_a11850e9ecae1cced03a8ca2ad9469616}\label{classmath_1_1_image_a11850e9ecae1cced03a8ca2ad9469616}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::get\+Raw\+Data\+Ptr@{Image\+::get\+Raw\+Data\+Ptr}}
+\index{Image\+::get\+Raw\+Data\+Ptr@{Image\+::get\+Raw\+Data\+Ptr}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::get\+Raw\+Data\+Ptr()}{Image::getRawDataPtr()}}
+{\footnotesize\ttfamily \hyperlink{classmath_1_1_vec3}{Vec3}$<$float$>$$\ast$ math\+::\+Image\+::\+Image\+::get\+Raw\+Data\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtains a pointer to the internal data.
+
+This is N\+OT a copy of the internal image data, but rather a pointer to the internally allocated space, so DO N\+OT attempt to delete the pointer. \mbox{\Hypertarget{classmath_1_1_image_a845cd219c6624862cc0c632a8a9efd5f}\label{classmath_1_1_image_a845cd219c6624862cc0c632a8a9efd5f}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::\+Image@{Image\+::\+Image}}
+\index{Image\+::\+Image@{Image\+::\+Image}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::\+Image()}{Image::Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily math\+::\+Image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor.
+
+By default, the dimensions of the image should be zero and the buffer must be set to nullptr. \mbox{\Hypertarget{classmath_1_1_image_aae37c3657dd8d50277cd9eb9fa15ec7b}\label{classmath_1_1_image_aae37c3657dd8d50277cd9eb9fa15ec7b}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::\+Image@{Image\+::\+Image}}
+\index{Image\+::\+Image@{Image\+::\+Image}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::\+Image()}{Image::Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily math\+::\+Image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})}
+
+Constructor with width and height specification.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & is the desired width of the new image. \\
+\hline
+{\em height} & is the desired height of the new image. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_image_a5cccddb81385864de4c9365d3ac95596}\label{classmath_1_1_image_a5cccddb81385864de4c9365d3ac95596}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::\+Image@{Image\+::\+Image}}
+\index{Image\+::\+Image@{Image\+::\+Image}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::\+Image()}{Image::Image()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily math\+::\+Image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{unsigned int}]{width,  }\item[{unsigned int}]{height,  }\item[{const \hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ $\ast$}]{data\+\_\+ptr }\end{DoxyParamCaption})}
+
+Constructor with data initialization.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & is the desired width of the new image. \\
+\hline
+{\em height} & is the desired height of the new image. \\
+\hline
+{\em data\+\_\+ptr} & is the source of the data to copy to the internal image buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+set\+Data 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classmath_1_1_image_ad58510b279a054e467bf6b4a78c6f75e}\label{classmath_1_1_image_ad58510b279a054e467bf6b4a78c6f75e}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::\+Image@{Image\+::\+Image}}
+\index{Image\+::\+Image@{Image\+::\+Image}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::\+Image()}{Image::Image()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily math\+::\+Image\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1_image}{Image} \&}]{src }\end{DoxyParamCaption})}
+
+Copy constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & is the source image to replicate in this object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_image_a0c6305898541b826fa8f5f65333d9072}\label{classmath_1_1_image_a0c6305898541b826fa8f5f65333d9072}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::operator=@{Image\+::operator=}}
+\index{Image\+::operator=@{Image\+::operator=}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::operator=()}{Image::operator=()}}
+{\footnotesize\ttfamily \hyperlink{classmath_1_1_image}{Image}\& math\+::\+Image\+::\+Image\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1_image}{Image} \&}]{right }\end{DoxyParamCaption})}
+
+Copy assignment operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & is the source image. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_image_a3dc725fbfeac02c4687bb7c7e4a184fd}\label{classmath_1_1_image_a3dc725fbfeac02c4687bb7c7e4a184fd}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::resize@{Image\+::resize}}
+\index{Image\+::resize@{Image\+::resize}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::resize()}{Image::resize()}}
+{\footnotesize\ttfamily void math\+::\+Image\+::\+Image\+::resize (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+width,  }\item[{unsigned int}]{new\+\_\+height }\end{DoxyParamCaption})}
+
+Changes the internal image data storage size.
+
+If the one or both of the given dimensions are smaller, the image should be clipped by discarding the remaining pixels in the rows and/or columns outside the margins. If the new dimensions are larger, pad the old pixels with zero values (black color). If the image is not yet allocated (zero width and height), allocate the internal buffer and set the image size according to the given dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+width} & is the user-\/provided width to resize the image storage to. \\
+\hline
+{\em new\+\_\+height} & is the user-\/provided height to resize the image storage to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_image_a6078dd91d77a6753e774466e61afd6f6}\label{classmath_1_1_image_a6078dd91d77a6753e774466e61afd6f6}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::set\+Data@{Image\+::set\+Data}}
+\index{Image\+::set\+Data@{Image\+::set\+Data}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::set\+Data()}{Image::setData()}}
+{\footnotesize\ttfamily void math\+::\+Image\+::\+Image\+::set\+Data (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ $\ast$\&}]{data\+\_\+ptr }\end{DoxyParamCaption})}
+
+Copies the image data from an external raw buffer to the internal image buffer.
+
+The member function A\+S\+S\+U\+M\+ES that the input buffer is of a size compatible with the internal storage of the \hyperlink{classmath_1_1_image}{Image} object and that the data buffer has been alreeady allocated. If the image buffer is not allocated or the width or height of the image are 0, the method should exit immediately.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+ptr} & is the reference to the preallocated buffer from where to copy the data to the \hyperlink{classmath_1_1_image}{Image} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_image_aa2b37a157ae5f1711b7eaf15b3f6c96a}\label{classmath_1_1_image_aa2b37a157ae5f1711b7eaf15b3f6c96a}} 
+\index{math\+::\+Image@{math\+::\+Image}!Image\+::set\+Pixel@{Image\+::set\+Pixel}}
+\index{Image\+::set\+Pixel@{Image\+::set\+Pixel}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{Image\+::set\+Pixel()}{Image::setPixel()}}
+{\footnotesize\ttfamily void math\+::\+Image\+::\+Image\+::set\+Pixel (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{\hyperlink{classmath_1_1_vec3}{Vec3}$<$ float $>$ \&}]{value }\end{DoxyParamCaption})}
+
+Sets the R\+GB values for an (x,y) pixel.
+
+The method should perform any necessary bounds checking.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & is the (zero-\/based) horizontal index of the pixel to set. \\
+\hline
+{\em y} & is the (zero-\/based) vertical index of the pixel to set. \\
+\hline
+{\em value} & is the new color for the (x,y) pixel. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_image_a152102a0b98f58cd4bb6206353fb0a4f}\label{classmath_1_1_image_a152102a0b98f58cd4bb6206353fb0a4f}} 
+\index{math\+::\+Image@{math\+::\+Image}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily bool math\+::\+Image\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reads the contents of an object from the specified file.
+
+The operator can be used for the implementation of \char`\"{}de-\/serialization\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & is the name of the file to use for loading the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_serializable_a5a8ec3fd8411693715ac76b1a10386ba}{Serializable}.
+
+\mbox{\Hypertarget{classmath_1_1_image_a5a48aa778e407699272463a1be8ac16f}\label{classmath_1_1_image_a5a48aa778e407699272463a1be8ac16f}} 
+\index{math\+::\+Image@{math\+::\+Image}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!math\+::\+Image@{math\+::\+Image}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily bool math\+::\+Image\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes the contents of an object to the specified file.
+
+The operator can be used for the implementation of \char`\"{}serialization\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & is the name of the file to use for saving the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_serializable_a60c53d8ec7e38531699d1ca19642318d}{Serializable}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+George/\+Documents/\+Visual Studio 2015/\+Projects/\+Team\+Project3/Image.\+h\item 
+C\+:/\+Users/\+George/\+Documents/\+Visual Studio 2015/\+Projects/\+Team\+Project3/Image.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+﻿  ppm_format.cpp
+c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(74): warning C4812: obsolete declaration style: please use 'math::Array<T>::Array' instead
+c:\users\george\documents\visual studio 2015\projects\teamproject3\ppm_format.cpp(96): warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+c:\users\george\documents\visual studio 2015\projects\teamproject3\ppm_format.cpp(99): warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+c:\users\george\documents\visual studio 2015\projects\teamproject3\ppm_format.cpp(102): warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+  Image.cpp
+c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(74): warning C4812: obsolete declaration style: please use 'math::Array<T>::Array' instead
+c:\users\george\documents\visual studio 2015\projects\teamproject3\image.cpp(56): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(49): warning C4018: '<' : signed/unsigned mismatch
+          c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(47) : while compiling class template member function 'const math::Vec3<float> &math::Array<math::Vec3<float>>::operator ()(int,int) const'
+          c:\users\george\documents\visual studio 2015\projects\teamproject3\image.cpp(40) : see reference to function template instantiation 'const math::Vec3<float> &math::Array<math::Vec3<float>>::operator ()(int,int) const' being compiled
+          c:\users\george\documents\visual studio 2015\projects\teamproject3\image.h(33) : see reference to class template instantiation 'math::Array<math::Vec3<float>>' being compiled
+c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(35): warning C4018: '<' : signed/unsigned mismatch
+          c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(33) : while compiling class template member function 'math::Vec3<float> &math::Array<math::Vec3<float>>::operator ()(int,int)'
+          c:\users\george\documents\visual studio 2015\projects\teamproject3\image.cpp(56) : see reference to function template instantiation 'math::Vec3<float> &math::Array<math::Vec3<float>>::operator ()(int,int)' being compiled
+c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(74): warning C4812: obsolete declaration style: please use 'math::Array<math::Vec3<float>>::Array' instead
+          c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(74) : while compiling class template member function 'math::Array<math::Vec3<float>>::Array(const math::Array<math::Vec3<float>> &)'
+          c:\users\george\documents\visual studio 2015\projects\teamproject3\image.cpp(164) : see reference to function template instantiation 'math::Array<math::Vec3<float>>::Array(const math::Array<math::Vec3<float>> &)' being compiled
+  filter.cpp
+c:\users\george\documents\visual studio 2015\projects\teamproject3\array.hpp(74): warning C4812: obsolete declaration style: please use 'math::Array<T>::Array' instead
+c:\users\george\documents\visual studio 2015\projects\teamproject3\neighborhoodfilters.h(38): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\sortingfilters.h(41): warning C4018: '>' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\blur.h(33): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\blur.h(34): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\blur.h(44): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\george\documents\visual studio 2015\projects\teamproject3\diff.h(37): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\diff.h(38): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\median.h(37): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\median.h(38): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\filter.cpp(35): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\filter.cpp(52): warning C4018: '<' : signed/unsigned mismatch
+c:\users\george\documents\visual studio 2015\projects\teamproject3\filter.cpp(59): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  TeamProject3.vcxproj -> C:\Users\George\Documents\Visual Studio 2015\Projects\TeamProject3\Debug\TeamProject3.exe

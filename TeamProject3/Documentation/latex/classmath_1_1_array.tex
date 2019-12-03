@@ -1,0 +1,222 @@
+\hypertarget{classmath_1_1_array}{}\section{math\+:\+:Array$<$ T $>$ Class Template Reference}
+\label{classmath_1_1_array}\index{math\+::\+Array$<$ T $>$@{math\+::\+Array$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Array.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classmath_1_1_array_aed1d255a072e2026f8fc7cb037d0697b}{get\+Width} () const
+\item 
+unsigned int \hyperlink{classmath_1_1_array_a2ebce27bf14e2c7ea83b5004e1a83bc5}{get\+Height} () const
+\item 
+void $\ast$const \hyperlink{classmath_1_1_array_ab2a61b31ce041823cc17220033b1fe1a}{get\+Raw\+Data\+Ptr} ()
+\item 
+T \& \hyperlink{classmath_1_1_array_a27f8eda2c4250a127826d697ebfb43ed}{operator()} (int x, int y)
+\item 
+const T \& \hyperlink{classmath_1_1_array_a24d7818828f26077fd029e48a87acc31}{operator()} (int x, int y) const
+\item 
+\hyperlink{classmath_1_1_array_abd2edb231282b3b43fcc3c7a91a59ca4}{Array} (unsigned int w, unsigned int h)
+\item 
+\hyperlink{classmath_1_1_array_ac90e20c0774ab33f14e23e8f59117223}{Array} (const \hyperlink{classmath_1_1_array}{Array}$<$ T $>$ \&source)
+\item 
+\hyperlink{classmath_1_1_array}{Array} \& \hyperlink{classmath_1_1_array_a5b164d8a39d58bfee90b6f878f3ae007}{operator=} (const \hyperlink{classmath_1_1_array}{Array}$<$ T $>$ \&source)
+\item 
+bool \hyperlink{classmath_1_1_array_a78beecb014ee77b0dff47dbbb946c704}{operator==} (const \hyperlink{classmath_1_1_array}{Array}$<$ T $>$ \&right) const
+\item 
+void \hyperlink{classmath_1_1_array_a0a4294917127f526f4a98c460acd7918}{resize} (unsigned int new\+\_\+width, unsigned int new\+\_\+height)
+\item 
+virtual \hyperlink{classmath_1_1_array_a68c3eb186d34387d63908b78937d7aee}{$\sim$\+Array} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmath_1_1_array_a51c616a2c3aad25866de1a644ccf85d9}\label{classmath_1_1_array_a51c616a2c3aad25866de1a644ccf85d9}} 
+T $\ast$ \hyperlink{classmath_1_1_array_a51c616a2c3aad25866de1a644ccf85d9}{buffer}
+\begin{DoxyCompactList}\small\item\em Flat storage of the elements of the array of type T. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmath_1_1_array_aac107e42abccdfb484b0544e6a860c10}\label{classmath_1_1_array_aac107e42abccdfb484b0544e6a860c10}} 
+unsigned int \hyperlink{classmath_1_1_array_aac107e42abccdfb484b0544e6a860c10}{width}
+\begin{DoxyCompactList}\small\item\em The width of the array (number of columns) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmath_1_1_array_a80b79625a8f11cbc63843376b591360c}\label{classmath_1_1_array_a80b79625a8f11cbc63843376b591360c}} 
+unsigned int \hyperlink{classmath_1_1_array_a80b79625a8f11cbc63843376b591360c}{height}
+\begin{DoxyCompactList}\small\item\em The height of the array (number of rows) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class math\+::\+Array$<$ T $>$}
+
+The \hyperlink{classmath_1_1_array}{Array} class implements a generic two-\/dimensional array of elements of type T. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmath_1_1_array_abd2edb231282b3b43fcc3c7a91a59ca4}\label{classmath_1_1_array_abd2edb231282b3b43fcc3c7a91a59ca4}} 
+\index{math\+::\+Array@{math\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::\hyperlink{classmath_1_1_array}{Array} (\begin{DoxyParamCaption}\item[{unsigned int}]{w,  }\item[{unsigned int}]{h }\end{DoxyParamCaption})}
+
+Constructor with array size.
+
+No default constructor is provided as it makes no sense.
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & is the width (columns) of the array \\
+\hline
+{\em h} & is the height (rows) of the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_array_ac90e20c0774ab33f14e23e8f59117223}\label{classmath_1_1_array_ac90e20c0774ab33f14e23e8f59117223}} 
+\index{math\+::\+Array@{math\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::\hyperlink{classmath_1_1_array}{Array}$<$ T $>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1_array}{Array}$<$ T $>$ \&}]{source }\end{DoxyParamCaption})}
+
+Copy constructor.
+
+No default constructor is provided as it makes no sense.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & is the array to replicate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_array_a68c3eb186d34387d63908b78937d7aee}\label{classmath_1_1_array_a68c3eb186d34387d63908b78937d7aee}} 
+\index{math\+::\+Array@{math\+::\+Array}!````~Array@{$\sim$\+Array}}
+\index{````~Array@{$\sim$\+Array}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{$\sim$\+Array()}{~Array()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::$\sim$\hyperlink{classmath_1_1_array}{Array} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmath_1_1_array_a2ebce27bf14e2c7ea83b5004e1a83bc5}\label{classmath_1_1_array_a2ebce27bf14e2c7ea83b5004e1a83bc5}} 
+\index{math\+::\+Array@{math\+::\+Array}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+unsigned int \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reports the height (rows) of the array
+
+\begin{DoxyReturn}{Returns}
+the height. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1_array_ab2a61b31ce041823cc17220033b1fe1a}\label{classmath_1_1_array_ab2a61b31ce041823cc17220033b1fe1a}} 
+\index{math\+::\+Array@{math\+::\+Array}!get\+Raw\+Data\+Ptr@{get\+Raw\+Data\+Ptr}}
+\index{get\+Raw\+Data\+Ptr@{get\+Raw\+Data\+Ptr}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Raw\+Data\+Ptr()}{getRawDataPtr()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void $\ast$const \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::get\+Raw\+Data\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtains a constant pointer to the internal data.
+
+This is N\+OT a copy of the internal array data, but rather a pointer to the internally allocated space. \mbox{\Hypertarget{classmath_1_1_array_aed1d255a072e2026f8fc7cb037d0697b}\label{classmath_1_1_array_aed1d255a072e2026f8fc7cb037d0697b}} 
+\index{math\+::\+Array@{math\+::\+Array}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Width()}{getWidth()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+unsigned int \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reports the width (columns) of the array
+
+\begin{DoxyReturn}{Returns}
+the width. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1_array_a27f8eda2c4250a127826d697ebfb43ed}\label{classmath_1_1_array_a27f8eda2c4250a127826d697ebfb43ed}} 
+\index{math\+::\+Array@{math\+::\+Array}!operator()@{operator()}}
+\index{operator()@{operator()}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Returns a reference to the element at the zero-\/based position (column x, row y).
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & is the zero-\/based column index of the array. \\
+\hline
+{\em y} & is the zero-\/based row index of the array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the element at position (x,y) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1_array_a24d7818828f26077fd029e48a87acc31}\label{classmath_1_1_array_a24d7818828f26077fd029e48a87acc31}} 
+\index{math\+::\+Array@{math\+::\+Array}!operator()@{operator()}}
+\index{operator()@{operator()}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+Returns a constant reference to the element at the zero-\/based position (column x, row y).
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & is the zero-\/based column index of the array. \\
+\hline
+{\em y} & is the zero-\/based row index of the array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the element at position (x,y) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1_array_a5b164d8a39d58bfee90b6f878f3ae007}\label{classmath_1_1_array_a5b164d8a39d58bfee90b6f878f3ae007}} 
+\index{math\+::\+Array@{math\+::\+Array}!operator=@{operator=}}
+\index{operator=@{operator=}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classmath_1_1_array}{Array}$<$ T $>$ \& \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1_array}{Array}$<$ T $>$ \&}]{source }\end{DoxyParamCaption})}
+
+Copy assignment operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & is the array to replicate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmath_1_1_array_a78beecb014ee77b0dff47dbbb946c704}\label{classmath_1_1_array_a78beecb014ee77b0dff47dbbb946c704}} 
+\index{math\+::\+Array@{math\+::\+Array}!operator==@{operator==}}
+\index{operator==@{operator==}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classmath_1_1_array}{Array}$<$ T $>$ \&}]{right }\end{DoxyParamCaption}) const}
+
+Equality operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & is the array to compare the current object to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the current array and the source have the same dimensions A\+ND one by one their elements of type T are the same. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmath_1_1_array_a0a4294917127f526f4a98c460acd7918}\label{classmath_1_1_array_a0a4294917127f526f4a98c460acd7918}} 
+\index{math\+::\+Array@{math\+::\+Array}!resize@{resize}}
+\index{resize@{resize}!math\+::\+Array@{math\+::\+Array}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \hyperlink{classmath_1_1_array}{math\+::\+Array}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+width,  }\item[{unsigned int}]{new\+\_\+height }\end{DoxyParamCaption})}
+
+Changes the internal array data storage size.
+
+If the one or both of the given dimensions are smaller, the array should be clipped by discarding the remaining elements in the rows and/or columns outside the margins. If the new dimensions are larger, pad the old elements with default values of type T. If the array is not yet allocated (zero width and height), allocate the internal buffer and set the array size according to the given dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+width} & is the user-\/provided width to resize the array to. \\
+\hline
+{\em new\+\_\+height} & is the user-\/provided height to resize the array to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+George/\+Documents/\+Visual Studio 2015/\+Projects/\+Team\+Project3/Array.\+h\item 
+C\+:/\+Users/\+George/\+Documents/\+Visual Studio 2015/\+Projects/\+Team\+Project3/Array.\+hpp\end{DoxyCompactItemize}

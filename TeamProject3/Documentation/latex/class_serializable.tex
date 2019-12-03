@@ -1,0 +1,76 @@
+\hypertarget{class_serializable}{}\section{Serializable Class Reference}
+\label{class_serializable}\index{Serializable@{Serializable}}
+
+
+{\ttfamily \#include $<$Serializable.\+h$>$}
+
+Inheritance diagram for Serializable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_serializable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_serializable_a5a8ec3fd8411693715ac76b1a10386ba}{operator$<$$<$} (std\+::string filename)=0
+\item 
+virtual bool \hyperlink{class_serializable_a60c53d8ec7e38531699d1ca19642318d}{operator$>$$>$} (std\+::string filename)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for object serialization to a file.
+
+Provides two operators that objects derived from this class can use to store and load their data from a file, Using a custom implementation for them. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_serializable_a5a8ec3fd8411693715ac76b1a10386ba}\label{class_serializable_a5a8ec3fd8411693715ac76b1a10386ba}} 
+\index{Serializable@{Serializable}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Serializable@{Serializable}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily virtual bool Serializable\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Reads the contents of an object from the specified file.
+
+The operator can be used for the implementation of \char`\"{}de-\/serialization\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & is the name of the file to use for loading the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmath_1_1_image_a152102a0b98f58cd4bb6206353fb0a4f}{math\+::\+Image}.
+
+\mbox{\Hypertarget{class_serializable_a60c53d8ec7e38531699d1ca19642318d}\label{class_serializable_a60c53d8ec7e38531699d1ca19642318d}} 
+\index{Serializable@{Serializable}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Serializable@{Serializable}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily virtual bool Serializable\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Writes the contents of an object to the specified file.
+
+The operator can be used for the implementation of \char`\"{}serialization\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & is the name of the file to use for saving the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmath_1_1_image_a5a48aa778e407699272463a1be8ac16f}{math\+::\+Image}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+George/\+Documents/\+Visual Studio 2015/\+Projects/\+Team\+Project3/Serializable.\+h\end{DoxyCompactItemize}
